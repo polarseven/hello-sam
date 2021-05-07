@@ -17,7 +17,7 @@ Resources:
         Properties:
             CodeUri: hello_world/
             Handler: app.lambda_handler
-            Runtime: nodejs14.x
+            Runtime: nodejs12.x
             Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
                 Variables:
                     SLACK_WEBHOOK: ""
