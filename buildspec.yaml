@@ -2,9 +2,9 @@ version: 0.2
   #AWS CodeBuild
 env:
   variables:
-    INPUT_FILE: sam/template.yaml
-    CONFIG_FILE: sam/configuration.json
-    OUTPUT_FILE: output-sam.yaml
+    INPUT_FILE: template.yaml
+    CONFIG_FILE: configuration.json
+    OUTPUT_FILE: packaged-template.yaml
 phases:
   install:
     commands:
