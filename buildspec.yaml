@@ -6,11 +6,13 @@ env:
     CONFIG_FILE: configuration.json
     OUTPUT_FILE: packaged-template.yaml
 phases:
+  # prebuild:
+  build:
+    commands:
+    - sam build --template $INPUT_FILE
   install:
     commands:
     - aws cloudformation package --template $INPUT_FILE --s3-bucket $PACKAGE_BUCKET --output-template $OUTPUT_FILE
-  # prebuild:
-  # build:
   # postbuild:
 
 artifacts:
